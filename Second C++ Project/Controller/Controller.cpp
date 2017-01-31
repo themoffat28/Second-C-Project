@@ -7,13 +7,17 @@
 //
 
 #include <iostream>
+#include "../Model/Timer.hpp"
 #include "Controller.hpp"
 
 using namespace std;
 
 void Controller :: start()
 {
-    cout << "Welcome," << endl;
+    Timer sillyTime = Timer();
+    sillyTime.startTimer();
+    
+    cout << "Welcome" << endl;
     int Number = 2;
     
     int * numberPointer = &Number;
@@ -35,6 +39,12 @@ void Controller :: start()
     cin >> assignedNumber;
     if (assignedNumber == 28) cout << "There we go. YOU WIN" << endl;
     if (assignedNumber != 28) cout << "Thats not your number. YOU LOSE";
+    
+    sillyTime.stopTimer();
+    sillyTime.displayTimerInformation();
+    
+    sillyTime.resetTimer();
+    cout << sillyTime.getExcecutionTimerInMicroseconds() << endl;
     
 }
 
