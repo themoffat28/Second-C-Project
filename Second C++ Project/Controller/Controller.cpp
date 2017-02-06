@@ -64,3 +64,9 @@ void Controller :: changeWithPointer(int * numberPointedTo)
 {
     *numberPointedTo += 9000;
 }
+
+void arrays()
+{
+    int array [5] {2, 43, 64, 33, 28};
+    int lazy [100] { };
+}
